@@ -28,10 +28,10 @@ def load_data():
     # Divide the data set into training and testing. Total=2456
     #  Training dataset (1500 rows)
     #  Training dataset (956 rows) 	
-    training_inputs = inputs[:7000]       #  Select first 1500 rows (0-1499) excluding last column
-    training_outputs = outputs[:7000]     #  Select first 1500 rows (0-1499) with only last column
-    testing_inputs = inputs[7000:]		  #  Select remaining rows (1500-2455) excluding last column
-    testing_outputs = outputs[7000:]      #  Select remaining rows (1500-2455) with only last column
+    training_inputs = inputs[:7000]       #  Select first 7000 rows (0-1499) excluding last column
+    training_outputs = outputs[:7000]     #  Select first 7000 rows (0-1499) with only last column
+    testing_inputs = inputs[7000:]		  #  Select remaining rows  excluding last column
+    testing_outputs = outputs[7000:]      #  Select remaining rows with only last column
 
     # Return the four arrays
     return training_inputs, training_outputs, testing_inputs, testing_outputs
