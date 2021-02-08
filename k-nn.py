@@ -59,18 +59,18 @@ if __name__ == '__main__':        # Entry point of the program
    
     accuracy = 100.0 * accuracy_score(test_outputs, predictions)     # Calculate the accuracy
     print ("The accuracy of your k-nn on testing data is: " + str(round(accuracy,2))+ "%")
-    print("confusionmatrix=\n",confusionmatrix)
+    print("Confusionmatrix=\n",confusionmatrix)
 	
     error=(1-accuracy/100.0)*100.0
     print("The error rate of the k-nn on testing data is: " + str(round(error,2)) + "%")
 	
     report=classification_report(test_outputs,predictions)
-    print("The classification report is:\n "+ str(report))
+    print("The Classification report is:\n "+ str(report))
     
     # taking user input url and predicting it
     cont="c"
     while(cont!="s"):
-        print("enter a url")
+        print("Enter a url")
         url=input()
         res=detect_features.generate_data_set(url)
         res = np.array(res).reshape(1,-1)
@@ -78,10 +78,10 @@ if __name__ == '__main__':        # Entry point of the program
         isphishing=pred[0]
         print(isphishing)
         if isphishing==1:  
-            print("not a phishing site")
+            print("Not a phishing site")
         else:
-            print("phishing site")
-        print("press s to stop and c to continue")
+            print("Phishing site")
+        print("Press s to stop and c to continue")
         cont=input()
 
     
